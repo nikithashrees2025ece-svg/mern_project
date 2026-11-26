@@ -1,0 +1,493 @@
+@import "tailwindcss";
+
+/* Basic Styling */
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f9f5;
+    color: #263b2b;
+  }
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  background-color: white;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #244d35;
+}
+
+.logo span {
+  color: #63a66b;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #344b3b;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #58a367;
+}
+
+.login-btn {
+  background-color: #2f7545;
+  color: white;
+  border: none;
+  padding: 11px 25px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  padding: 70px 10%;
+  background-color: #e9f3e9;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.tagline {
+  color: #438650;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: 65px;
+  line-height: 1.15;
+  color: #254b32;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #65a66e;
+}
+
+.description {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #596b5d;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.explore-btn,
+.share-btn {
+  padding: 14px 25px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.explore-btn {
+  background-color: #347849;
+  color: white;
+  border: none;
+}
+
+.share-btn {
+  background-color: white;
+  color: #347849;
+  border: 1px solid #347849;
+}
+
+/* About Section */
+
+.about {
+  padding: 80px 10%;
+  background-color: #ffffff;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 50px;
+}
+
+.section-heading > p:first-child {
+  color: #438650;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.section-heading h2 {
+  font-size: 38px;
+  color: #254b32;
+  margin-bottom: 15px;
+}
+
+.section-heading h2 span {
+  color: #65a66e;
+}
+
+.section-heading > p:last-child {
+  color: #657568;
+  line-height: 1.7;
+}
+
+.features {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.feature-card {
+  flex: 1;
+  padding: 35px 25px;
+  background-color: #f5f9f5;
+  border-radius: 12px;
+  border: 1px solid #e2eee2;
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  color: #2f7545;
+  margin-bottom: 15px;
+  font-size: 21px;
+}
+
+.feature-card p {
+  color: #657568;
+  line-height: 1.7;
+}
+
+/* Expiry Tracker Section */
+
+.expiry-section {
+  padding: 80px 10%;
+  background-color: #f5f9f5;
+}
+
+/* Product Form */
+
+.product-form {
+  background-color: white;
+  padding: 35px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 0 auto 45px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.product-form h3 {
+  color: #254b32;
+  font-size: 23px;
+  margin-bottom: 25px;
+}
+
+#productForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #344b3b;
+}
+
+.form-group input,
+.form-group select {
+  padding: 13px;
+  border: 1px solid #d5e2d5;
+  border-radius: 7px;
+  font-size: 15px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #438650;
+}
+
+.add-product-btn {
+  grid-column: 1 / -1;
+  padding: 14px;
+  background-color: #347849;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-product-btn:hover {
+  background-color: #265e38;
+}
+
+/* Product List */
+
+.product-list {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.product-list h3 {
+  font-size: 23px;
+  color: #254b32;
+  margin-bottom: 25px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 18px 15px;
+  border-bottom: 1px solid #e5eee5;
+}
+
+th {
+  background-color: #e9f3e9;
+  color: #254b32;
+}
+
+td {
+  color: #596b5d;
+}
+
+.status-warning {
+  background-color: #fff1d6;
+  color: #a66b12;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.status-safe {
+  background-color: #e0f3e3;
+  color: #28723d;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+  .features {
+    flex-direction: column;
+  }
+
+  #productForm {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+}
+
+/* Expired Product Status */
+
+.status-expired {
+  background-color: #ffe1e1;
+  color: #c62828;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* Resource Sharing Section */
+
+.sharing-section {
+  padding: 80px 10%;
+  background-color: #ffffff;
+}
+
+/* Sharing Form */
+
+.sharing-form {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  padding: 35px;
+  background-color: #f5f9f5;
+  border-radius: 12px;
+}
+
+.sharing-form h3 {
+  font-size: 23px;
+  color: #254b32;
+  margin-bottom: 25px;
+}
+
+#sharingForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group textarea {
+  padding: 13px;
+  border: 1px solid #d5e2d5;
+  border-radius: 7px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  resize: vertical;
+}
+
+.form-group textarea:focus {
+  outline: none;
+  border-color: #438650;
+}
+
+.share-resource-btn {
+  grid-column: 1 / -1;
+  padding: 14px;
+  background-color: #347849;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.share-resource-btn:hover {
+  background-color: #265e38;
+}
+
+/* Available Resources */
+
+.available-resources h3 {
+  font-size: 25px;
+  color: #254b32;
+  margin-bottom: 25px;
+}
+
+.resource-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.resource-card {
+  background-color: #f5f9f5;
+  padding: 28px;
+  border-radius: 12px;
+  border: 1px solid #e2eee2;
+  transition: 0.3s;
+}
+
+.resource-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.resource-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.resource-card h3 {
+  font-size: 20px;
+  color: #2f7545;
+  margin-bottom: 15px;
+}
+
+.resource-card p {
+  color: #657568;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.available-label {
+  display: inline-block;
+  margin-top: 12px;
+  background-color: #e0f3e3;
+  color: #28723d;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+  #sharingForm {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width,
+  .share-resource-btn {
+    grid-column: auto;
+  }
+
+}
