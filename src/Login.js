@@ -1,18 +1,24 @@
 
 import './style.css';
 
+// ==========================================
+// LOGIN PAGE DESIGN
+// ==========================================
+
 document.querySelector('#loginApp').innerHTML = `
 
-  <div class="min-h-screen flex items-center justify-center p-5">
+  <div class="min-h-screen flex items-center justify-center p-5
+              bg-gradient-to-br from-green-100 via-emerald-50 to-teal-100">
 
-   <div class="bg-white shadow-xl rounded-2xl
-            w-full max-w-md p-8 sm:p-10">
-      <!-- Logo -->
+    <div class="bg-white shadow-2xl rounded-3xl w-full max-w-md
+                p-8 sm:p-10 border border-green-100">
+
+      <!-- LOGO -->
 
       <div class="text-center mb-8">
 
-        <h1 class="text-4xl font-bold text-green-800">
-          Life<span class="text-green-500">Loop</span>
+        <h1 class="text-4xl font-extrabold text-green-800">
+          Life<span class="text-emerald-500">Loop</span> ♻
         </h1>
 
         <p class="text-gray-500 mt-2">
@@ -21,35 +27,30 @@ document.querySelector('#loginApp').innerHTML = `
 
       </div>
 
+      <!-- HEADING -->
 
-      <!-- Heading -->
+      <div class="mb-7 text-center">
 
-      <div class="mb-7">
-
-        <h2 class="text-2xl font-bold text-gray-800">
+        <h2 class="text-3xl font-bold text-gray-800">
           Welcome Back!
         </h2>
 
         <p class="text-gray-500 mt-2">
-          Login to continue your journey.
+          Login to continue your sustainable journey.
         </p>
 
       </div>
 
-
-      <!-- Login Form -->
+      <!-- LOGIN FORM -->
 
       <form id="loginForm" class="space-y-5">
 
-        <!-- Email -->
+        <!-- EMAIL -->
 
-        <div class="mb-5">
+        <div>
 
-          <label class="block text-gray-700
-                        font-semibold mb-2">
-
+          <label class="block text-gray-700 font-semibold mb-2">
             Email Address
-
           </label>
 
           <input
@@ -57,99 +58,105 @@ document.querySelector('#loginApp').innerHTML = `
             id="email"
             placeholder="Enter your email"
             required
-            class="w-full border border-gray-300
-                   rounded-lg p-3 outline-none
-                   focus:ring-2 focus:ring-green-500"
+            class="w-full border border-gray-300 rounded-xl p-3
+                   outline-none focus:ring-2 focus:ring-emerald-500
+                   focus:border-emerald-500"
           >
 
         </div>
 
+        <!-- PASSWORD -->
 
-        <div class="mb-4">
+        <div>
 
-  <label class="block text-gray-700 font-semibold mb-2">
-    Password
-  </label>
+          <label class="block text-gray-700 font-semibold mb-2">
+            Password
+          </label>
 
-  <div class="relative">
+          <div class="relative">
 
-    <input
-      type="password"
-      id="password"
-      placeholder="Enter your password"
-      required
-      class="w-full border border-gray-300 rounded-lg p-3 pr-20 outline-none focus:ring-2 focus:ring-green-500"
-    >
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+              class="w-full border border-gray-300 rounded-xl
+                     p-3 pr-20 outline-none
+                     focus:ring-2 focus:ring-emerald-500"
+            >
 
-    <button
-      type="button"
-      id="togglePassword"
-      class="absolute right-3 top-3 text-green-700 text-sm font-semibold"
-    >
-      Show
-    </button>
+            <button
+              type="button"
+              id="togglePassword"
+              class="absolute right-3 top-3
+                     text-emerald-700 font-semibold text-sm"
+            >
+              Show
+            </button>
 
-  </div>
+          </div>
 
-</div>
+        </div>
 
+        <!-- REMEMBER ME AND FORGOT PASSWORD -->
 
-        <!-- Remember Me -->
+        <div class="flex justify-between items-center text-sm">
 
-        <div class="flex justify-between
-                    items-center mb-6">
+          <label class="flex items-center gap-2 text-gray-600">
 
-          <label class="flex items-center
-                        gap-2 text-sm text-gray-600">
-
-            <input type="checkbox">
+            <input
+              type="checkbox"
+              id="rememberMe"
+              class="accent-green-600"
+            >
 
             Remember Me
 
           </label>
 
-          <a href="#"
-             class="text-green-700 text-sm
-                    hover:underline">
-
+          <a
+            href="#"
+            id="forgotPassword"
+            class="text-emerald-700 font-semibold hover:underline"
+          >
             Forgot Password?
-
           </a>
 
         </div>
 
-
-        <!-- Login Button -->
+        <!-- LOGIN BUTTON -->
 
         <button
           type="submit"
-          class="w-full bg-green-700
-                 hover:bg-green-800
-                 text-white font-semibold
-                 p-3 rounded-lg transition">
-
-          Login
-
+          class="w-full bg-gradient-to-r from-green-600 to-emerald-500
+                 hover:from-green-700 hover:to-emerald-600
+                 text-white font-bold p-3 rounded-xl shadow-lg
+                 transition duration-300"
+        >
+          Login →
         </button>
 
       </form>
 
+      <!-- SIGNUP LINK -->
 
-      <!-- Signup Link -->
-
-      <p class="text-center text-gray-600
-                mt-7 text-sm">
+      <p class="text-center text-gray-600 mt-7 text-sm">
 
         Don't have an account?
 
-        <a href="Signup.html"
-           class="text-green-700
-                  font-bold hover:underline">
-
+        <a
+          href="/Signup.html"
+          class="text-emerald-700 font-bold hover:underline"
+        >
           Sign Up
-
         </a>
 
+      </p>
+
+      <!-- FOOTER -->
+
+      <p class="text-center text-xs text-gray-400 mt-6">
+        Together for a greener tomorrow 🌱
       </p>
 
     </div>
@@ -159,49 +166,73 @@ document.querySelector('#loginApp').innerHTML = `
 `;
 
 
-// Login Form Functionality
+// ==========================================
+// SHOW / HIDE PASSWORD
+// ==========================================
 
-const loginForm = document.getElementById("loginForm");
+const passwordInput = document.getElementById('password');
 
-loginForm.addEventListener("submit", function(event) {
+const togglePassword = document.getElementById('togglePassword');
+
+togglePassword.addEventListener('click', function() {
+
+  if (passwordInput.type === 'password') {
+
+    passwordInput.type = 'text';
+
+    togglePassword.textContent = 'Hide';
+
+  } else {
+
+    passwordInput.type = 'password';
+
+    togglePassword.textContent = 'Show';
+
+  }
+
+});
+
+
+// ==========================================
+// FORGOT PASSWORD
+// ==========================================
+
+document.getElementById('forgotPassword')
+  .addEventListener('click', function(event) {
+
+    event.preventDefault();
+
+    alert('Password recovery will be available soon!');
+
+  });
+
+
+// ==========================================
+// LOGIN FORM VALIDATION
+// ==========================================
+
+const loginForm = document.getElementById('loginForm');
+
+loginForm.addEventListener('submit', function(event) {
 
   event.preventDefault();
 
-  const email = document.getElementById("email").value;
+  const email = document.getElementById('email').value.trim();
 
-  const password = document.getElementById("password").value;
+  const password = passwordInput.value.trim();
 
-  if (email.trim() === "" || password.trim() === "") {
+  if (!email || !password) {
 
-    alert("Please enter your email and password.");
+    alert('Please enter your email and password.');
 
     return;
 
   }
 
-  alert("Login form submitted successfully!");
+  alert('Login successful! Welcome to LifeLoop.');
 
-});
-// Show / Hide Password
+  // REDIRECT TO HOME PAGE
 
-const passwordInput = document.getElementById("password");
-
-const togglePassword = document.getElementById("togglePassword");
-
-togglePassword.addEventListener("click", function() {
-
-  if (passwordInput.type === "password") {
-
-    passwordInput.type = "text";
-
-    togglePassword.textContent = "Hide";
-
-  } else {
-
-    passwordInput.type = "password";
-
-    togglePassword.textContent = "Show";
-
-  }
+  window.location.href = '/index.html';
 
 });

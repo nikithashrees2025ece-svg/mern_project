@@ -3,193 +3,265 @@ import './style.css';
 
 document.querySelector('#signupApp').innerHTML = `
 
-  <div class="signup-page">
+  <div class="signup-wrapper">
 
-    <div class="signup-card">
+    <!-- LEFT BRANDING SECTION -->
 
-      <!-- Logo -->
+    <section class="signup-brand">
 
-      <div class="text-center mb-7">
+      <div class="brand-content">
 
-        <h1 class="text-4xl font-bold text-green-800">
-          Life<span class="text-green-500">Loop</span>
+        <h1 class="brand-logo">
+          Life<span>Loop</span>
         </h1>
 
-        <p class="text-gray-500 mt-2">
-          Smart Living, Less Waste
+        <p class="brand-tag">
+          SMART LIVING, LESS WASTE
         </p>
 
-      </div>
-
-      <!-- Heading -->
-
-      <div class="mb-6">
-
-        <h2 class="text-2xl font-bold text-gray-800">
-          Create Your Account
+        <h2>
+          Small Steps.
+          <br>
+          <span>Greener Future.</span>
         </h2>
 
-        <p class="text-gray-500 mt-2">
-          Join LifeLoop and make a difference!
+        <p class="brand-description">
+          Join our community and make a difference.
+          Track expiry dates, share useful resources
+          and help build a sustainable future.
+        </p>
+
+        <div class="brand-illustration">🌱</div>
+
+        <p class="brand-footer">
+          TRACK. SHARE. SUSTAIN.
         </p>
 
       </div>
 
-      <!-- Signup Form -->
+    </section>
 
-      <form id="signupForm" class="space-y-4">
 
-        <!-- Full Name -->
+    <!-- RIGHT SIGNUP SECTION -->
 
-        <div>
-          <label class="block text-gray-700 font-semibold mb-2">
-            Full Name
-          </label>
+    <section class="signup-form-section">
 
-          <input
-            type="text"
-            id="fullName"
-            placeholder="Enter your full name"
-            required
-            class="w-full border border-gray-300 rounded-lg p-3
-                   outline-none focus:ring-2 focus:ring-green-500"
+      <div class="signup-card">
+
+        <div class="signup-heading">
+
+          <span class="signup-icon">🌿</span>
+
+          <h2>Create Your Account</h2>
+
+          <p>
+            Start your sustainable journey today!
+          </p>
+
+        </div>
+
+
+        <form id="signupForm">
+
+          <div class="signup-field">
+            <label>Full Name</label>
+
+            <input
+              type="text"
+              id="fullName"
+              placeholder="Enter your full name"
+              required
+            >
+          </div>
+
+
+          <div class="signup-field">
+            <label>Email Address</label>
+
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            >
+          </div>
+
+
+          <div class="signup-field">
+            <label>Phone Number</label>
+
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter your 10-digit number"
+              pattern="[0-9]{10}"
+              required
+            >
+          </div>
+
+
+          <div class="signup-field">
+            <label>Password</label>
+
+            <div class="password-box">
+
+              <input
+                type="password"
+                id="password"
+                placeholder="Create a password"
+                minlength="8"
+                required
+              >
+
+              <button
+                type="button"
+                id="togglePassword"
+              >
+                Show
+              </button>
+
+            </div>
+
+            <div
+              class="password-strength"
+              id="strengthText"
+            >
+              Use at least 8 characters.
+            </div>
+
+          </div>
+
+
+          <div class="signup-field">
+            <label>Confirm Password</label>
+
+            <input
+              type="password"
+              id="confirmPassword"
+              placeholder="Confirm your password"
+              required
+            >
+          </div>
+
+
+          <div class="terms-row">
+
+            <input
+              type="checkbox"
+              id="terms"
+              required
+            >
+
+            <label for="terms">
+              I agree to the Terms and Conditions
+            </label>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="signup-submit"
           >
-        </div>
+            Create Account →
+          </button>
 
-        <!-- Email -->
+        </form>
 
-        <div>
-          <label class="block text-gray-700 font-semibold mb-2">
-            Email Address
-          </label>
 
-          <input
-            type="email"
-            id="email"
-            placeholder="Enter your email"
-            required
-            class="w-full border border-gray-300 rounded-lg p-3
-                   outline-none focus:ring-2 focus:ring-green-500"
-          >
-        </div>
+        <p class="signup-login">
+          Already have an account?
 
-        <!-- Phone -->
+          <a href="Login.html">
+            Login
+          </a>
+        </p>
 
-        <div>
-          <label class="block text-gray-700 font-semibold mb-2">
-            Phone Number
-          </label>
+      </div>
 
-          <input
-            type="tel"
-            id="phone"
-            placeholder="Enter your phone number"
-            required
-            class="w-full border border-gray-300 rounded-lg p-3
-                   outline-none focus:ring-2 focus:ring-green-500"
-          >
-        </div>
-
-        <!-- Password -->
-
-        <div>
-          <label class="block text-gray-700 font-semibold mb-2">
-            Password
-          </label>
-
-          <input
-            type="password"
-            id="password"
-            placeholder="Create a password"
-            minlength="6"
-            required
-            class="w-full border border-gray-300 rounded-lg p-3
-                   outline-none focus:ring-2 focus:ring-green-500"
-          >
-        </div>
-
-        <!-- Confirm Password -->
-
-        <div>
-          <label class="block text-gray-700 font-semibold mb-2">
-            Confirm Password
-          </label>
-
-          <input
-            type="password"
-            id="confirmPassword"
-            placeholder="Confirm your password"
-            minlength="6"
-            required
-            class="w-full border border-gray-300 rounded-lg p-3
-                   outline-none focus:ring-2 focus:ring-green-500"
-          >
-        </div>
-
-        <!-- Terms -->
-
-        <div class="flex items-center gap-2 text-sm text-gray-600">
-
-          <input type="checkbox" id="terms" required>
-
-          <label for="terms">
-            I agree to the Terms and Conditions
-          </label>
-
-        </div>
-
-        <!-- Button -->
-
-        <button
-          type="submit"
-          class="w-full bg-green-700 hover:bg-green-800
-                 text-white font-semibold p-3 rounded-lg transition"
-        >
-          Create Account
-        </button>
-
-      </form>
-
-      <!-- Login Link -->
-
-      <p class="text-center text-gray-600 mt-6 text-sm">
-
-        Already have an account?
-
-        <a href="Login.html"
-           class="text-green-700 font-bold hover:underline">
-          Login
-        </a>
-
-      </p>
-
-    </div>
+    </section>
 
   </div>
 
 `;
 
-// Signup Form Functionality
 
-const signupForm = document.getElementById("signupForm");
+// SHOW / HIDE PASSWORD
 
-signupForm.addEventListener("submit", function(event) {
+const password = document.getElementById('password');
+
+const togglePassword =
+  document.getElementById('togglePassword');
+
+togglePassword.addEventListener('click', () => {
+
+  const hidden = password.type === 'password';
+
+  password.type = hidden ? 'text' : 'password';
+
+  togglePassword.textContent = hidden ? 'Hide' : 'Show';
+
+});
+
+
+// PASSWORD STRENGTH
+
+const strengthText =
+  document.getElementById('strengthText');
+
+password.addEventListener('input', () => {
+
+  const value = password.value;
+
+  if (value.length === 0) {
+
+    strengthText.textContent =
+      'Use at least 8 characters.';
+
+  } else if (value.length < 8) {
+
+    strengthText.textContent =
+      'Weak - add more characters.';
+
+  } else if (
+    /[A-Z]/.test(value) &&
+    /[0-9]/.test(value) &&
+    /[^A-Za-z0-9]/.test(value)
+  ) {
+
+    strengthText.textContent =
+      'Strong password ✓';
+
+  } else {
+
+    strengthText.textContent =
+      'Medium - add uppercase, number and symbol.';
+
+  }
+
+});
+
+
+// SIGNUP FORM VALIDATION
+
+const signupForm =
+  document.getElementById('signupForm');
+
+signupForm.addEventListener('submit', (event) => {
 
   event.preventDefault();
 
-  const password = document.getElementById("password").value;
-
   const confirmPassword =
-    document.getElementById("confirmPassword").value;
+    document.getElementById('confirmPassword').value;
 
-  if (password !== confirmPassword) {
+  if (password.value !== confirmPassword) {
 
-    alert("Passwords do not match!");
+    alert('Passwords do not match!');
 
     return;
 
   }
 
-  alert("Registration form submitted successfully!");
+  alert('Signup form validated successfully!');
 
 });

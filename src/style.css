@@ -1,5 +1,42 @@
 @import "tailwindcss";
 
+/* =================================
+   LIFELOOP - GLOBAL DESIGN SYSTEM
+================================= */
+
+:root {
+  /* Primary Colours */
+  --primary: #064E3B;
+  --secondary: #10B981;
+  --accent: #A3E635;
+  --teal: #0D9488;
+
+  /* Background Colours */
+  --background: #F0FDF4;
+  --surface: #FFFFFF;
+  --surface-light: #ECFDF5;
+
+  /* Text Colours */
+  --text-dark: #123B2C;
+  --text-muted: #64748B;
+  --text-light: #FFFFFF;
+
+  /* Status Colours */
+  --success: #16A34A;
+  --warning: #FBBF24;
+  --danger: #EF4444;
+
+  /* Effects */
+  --card-shadow: 0 10px 30px rgba(6, 78, 59, 0.10);
+  --green-gradient: linear-gradient(
+    135deg,
+    #064E3B,
+    #10B981,
+    #0D9488
+  );
+}
+
+
 /* Basic Styling */
 
 @layer base {
@@ -491,3 +528,639 @@ td {
   }
 
 }
+
+/* LIFELOOP SIGNUP DESIGN */
+
+.signup-wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  background: #f0f7f1;
+  font-family: Arial, sans-serif;
+}
+
+/* Left branding */
+
+.signup-brand {
+  background: linear-gradient(145deg, #123d2c, #187747, #20a45b);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 55px;
+}
+
+.brand-content {
+  max-width: 470px;
+}
+
+.brand-logo {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+
+.brand-logo span {
+  color: #a7f3b5;
+}
+
+.brand-tag {
+  color: #b7f7c5;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
+.brand-content h2 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.brand-content h2 span {
+  color: #a7f3b5;
+}
+
+.brand-description {
+  color: #e0f2e5;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.brand-illustration {
+  font-size: 100px;
+  margin-top: 35px;
+}
+
+.brand-footer {
+  color: #c7f9d2;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+/* Signup form */
+
+.signup-form-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px 30px;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 520px;
+  background: white;
+  padding: 38px;
+  border-radius: 22px;
+  box-shadow: 0 15px 45px rgba(20, 80, 45, 0.10);
+}
+
+.signup-heading {
+  margin-bottom: 28px;
+}
+
+.signup-icon {
+  font-size: 30px;
+}
+
+.signup-heading h2 {
+  font-size: 29px;
+  color: #14532d;
+  margin: 12px 0;
+}
+
+.signup-heading p {
+  color: #718078;
+  font-size: 14px;
+}
+
+/* Form fields */
+
+.signup-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 17px;
+}
+
+.signup-field label {
+  color: #294b37;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.signup-field input {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #d5e4d9;
+  border-radius: 9px;
+  font-size: 14px;
+  outline: none;
+  background: #fafffb;
+  color: #263b2b;
+}
+
+.signup-field input:focus {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.10);
+}
+
+.password-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d5e4d9;
+  border-radius: 9px;
+  background: #fafffb;
+}
+
+.password-box input {
+  border: none;
+  background: transparent;
+}
+
+.password-box input:focus {
+  box-shadow: none;
+}
+
+.password-box button {
+  border: none;
+  background: transparent;
+  color: #15803d;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.password-strength {
+  font-size: 12px;
+  color: #718078;
+}
+
+.terms-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 20px 0;
+  font-size: 13px;
+  color: #52665a;
+}
+
+.terms-row input {
+  accent-color: #15803d;
+}
+
+.signup-submit {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(90deg, #15803d, #16a34a);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signup-submit:hover {
+  background: #14532d;
+  transform: translateY(-2px);
+}
+
+.signup-login {
+  text-align: center;
+  margin-top: 23px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.signup-login a {
+  color: #15803d;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Responsive */
+
+@media (max-width: 850px) {
+  .signup-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .signup-brand {
+    padding: 35px 25px;
+  }
+
+  .brand-content h2 {
+    font-size: 35px;
+  }
+
+  .brand-logo {
+    margin-bottom: 20px;
+  }
+
+  .brand-illustration {
+    font-size: 55px;
+    margin-top: 15px;
+  }
+
+  .signup-form-section {
+    padding: 30px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-card {
+    padding: 25px 20px;
+  }
+
+  .signup-heading h2 {
+    font-size: 24px;
+  }
+}
+
+/* =====================================
+   LIFELOOP - VIBRANT SIGNUP PAGE
+===================================== */
+
+.signup-wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  background: var(--background);
+  font-family: Arial, sans-serif;
+}
+
+/* LEFT BRANDING */
+
+.signup-brand {
+  background: linear-gradient(
+    135deg,
+    #064E3B,
+    #059669,
+    #0D9488
+  );
+
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 55px;
+  position: relative;
+  overflow: hidden;
+}
+
+.signup-brand::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(163, 230, 53, 0.12);
+  top: -100px;
+  right: -100px;
+}
+
+.signup-brand::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  bottom: -90px;
+  left: -70px;
+}
+
+.brand-content {
+  max-width: 470px;
+  position: relative;
+  z-index: 1;
+}
+
+.brand-logo {
+  font-size: 43px;
+  font-weight: bold;
+  margin-bottom: 35px;
+  color: white;
+}
+
+.brand-logo span {
+  color: var(--accent);
+}
+
+.brand-tag {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
+.brand-content h2 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  color: white;
+}
+
+.brand-content h2 span {
+  color: var(--accent);
+}
+
+.brand-description {
+  color: #D1FAE5;
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+.brand-illustration {
+  font-size: 100px;
+  margin-top: 35px;
+  animation: floating 3s ease-in-out infinite;
+}
+
+.brand-footer {
+  color: #D9F99D;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* RIGHT SECTION */
+
+.signup-form-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px 30px;
+  background:
+    radial-gradient(
+      circle at top right,
+      #D1FAE5,
+      transparent 40%
+    ),
+    #F0FDF4;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 520px;
+  background: white;
+  padding: 38px;
+  border-radius: 24px;
+  box-shadow: 0 15px 45px rgba(6, 78, 59, 0.12);
+  border: 1px solid #DCFCE7;
+}
+
+/* HEADING */
+
+.signup-heading {
+  margin-bottom: 28px;
+}
+
+.signup-icon {
+  display: inline-block;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.signup-heading h2 {
+  font-size: 29px;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.signup-heading p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* INPUT FIELDS */
+
+.signup-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 17px;
+}
+
+.signup-field label {
+  color: var(--text-dark);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.signup-field input {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #D1E7D8;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  background: #F7FEF9;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+.signup-field input:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.13);
+  background: white;
+}
+
+/* PASSWORD */
+
+.password-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #D1E7D8;
+  border-radius: 10px;
+  background: #F7FEF9;
+}
+
+.password-box input {
+  border: none;
+  background: transparent;
+}
+
+.password-box input:focus {
+  box-shadow: none;
+}
+
+.password-box button {
+  border: none;
+  background: transparent;
+  color: #059669;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.password-strength {
+  font-size: 12px;
+  color: #64748B;
+}
+
+/* TERMS */
+
+.terms-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 20px 0;
+  font-size: 13px;
+  color: #52665A;
+}
+
+.terms-row input {
+  accent-color: #10B981;
+}
+
+/* BUTTON */
+
+.signup-submit {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(
+    90deg,
+    #059669,
+    #10B981,
+    #0D9488
+  );
+  color: white;
+  border: none;
+  border-radius: 11px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 6px 15px rgba(16, 185, 129, 0.2);
+}
+
+.signup-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(16, 185, 129, 0.3);
+}
+
+/* LOGIN LINK */
+
+.signup-login {
+  text-align: center;
+  margin-top: 23px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.signup-login a {
+  color: #059669;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signup-login a:hover {
+  color: #064E3B;
+  text-decoration: underline;
+}
+
+/* ANIMATION */
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+
+  .signup-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .signup-brand {
+    padding: 40px 25px;
+  }
+
+  .brand-content h2 {
+    font-size: 36px;
+  }
+
+  .brand-logo {
+    margin-bottom: 20px;
+  }
+
+  .brand-illustration {
+    font-size: 60px;
+    margin-top: 15px;
+  }
+
+  .signup-form-section {
+    padding: 30px 18px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .signup-card {
+    padding: 25px 20px;
+  }
+
+  .signup-heading h2 {
+    font-size: 24px;
+  }
+
+}
+
+/* EXPIRY TRACKER STATUS */
+
+.status-expired {
+  background: #FEE2E2;
+  color: #B91C1C;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status-warning {
+  background: #FEF3C7;
+  color: #92400E;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status-safe {
+  background: #DCFCE7;
+  color: #166534;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.delete-btn {
+  background: #FEE2E2;
+  color: #B91C1C;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #FECACA;
+}
+
+
+
