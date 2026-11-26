@@ -16,7 +16,9 @@ document.querySelector('#app').innerHTML = `
       <a href="#contact">Contact</a>
     </nav>
 
-    <button class="login-btn">Login</button>
+   <a href="/Login.html" class="login-btn">
+  Login
+</a>
 
   </header>
 

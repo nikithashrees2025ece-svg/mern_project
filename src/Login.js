@@ -211,28 +211,28 @@ document.getElementById('forgotPassword')
 // LOGIN FORM VALIDATION
 // ==========================================
 
-const loginForm = document.getElementById('loginForm');
 
-loginForm.addEventListener('submit', function(event) {
+// Login Form Functionality
+
+const loginForm = document.getElementById("loginForm");
+
+loginForm.addEventListener("submit", function(event) {
 
   event.preventDefault();
 
-  const email = document.getElementById('email').value.trim();
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
-  const password = passwordInput.value.trim();
-
-  if (!email || !password) {
-
-    alert('Please enter your email and password.');
-
+  if (email.trim() === "" || password.trim() === "") {
+    alert("Please enter your email and password.");
     return;
-
   }
 
-  alert('Login successful! Welcome to LifeLoop.');
+  // Save login information
+  localStorage.setItem("isLoggedIn", "true");
+  localStorage.setItem("userEmail", email);
 
-  // REDIRECT TO HOME PAGE
-
-  window.location.href = '/index.html';
+  // Navigate to Dashboard
+  window.location.href = "/Dashboard.html";
 
 });
