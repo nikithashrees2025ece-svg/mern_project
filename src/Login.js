@@ -1,24 +1,33 @@
 
 import './style.css';
 
-// ==========================================
-// LOGIN PAGE DESIGN
-// ==========================================
+// ======================================
+// LIFELOOP LOGIN PAGE
+// ======================================
 
 document.querySelector('#loginApp').innerHTML = `
 
-  <div class="min-h-screen flex items-center justify-center p-5
-              bg-gradient-to-br from-green-100 via-emerald-50 to-teal-100">
+  <div class="min-h-screen flex items-center justify-center
+              p-5 bg-gradient-to-br from-green-100
+              via-emerald-50 to-teal-100">
 
-    <div class="bg-white shadow-2xl rounded-3xl w-full max-w-md
-                p-8 sm:p-10 border border-green-100">
+    <div class="bg-white shadow-2xl rounded-3xl
+                w-full max-w-md p-8 sm:p-10
+                border border-green-100">
+
 
       <!-- LOGO -->
 
       <div class="text-center mb-8">
 
+        <div class="text-5xl mb-3">
+          ♻️
+        </div>
+
         <h1 class="text-4xl font-extrabold text-green-800">
-          Life<span class="text-emerald-500">Loop</span> ♻
+
+          Life<span class="text-emerald-500">Loop</span>
+
         </h1>
 
         <p class="text-gray-500 mt-2">
@@ -26,6 +35,7 @@ document.querySelector('#loginApp').innerHTML = `
         </p>
 
       </div>
+
 
       <!-- HEADING -->
 
@@ -41,123 +51,184 @@ document.querySelector('#loginApp').innerHTML = `
 
       </div>
 
+
       <!-- LOGIN FORM -->
 
       <form id="loginForm" class="space-y-5">
+
 
         <!-- EMAIL -->
 
         <div>
 
-          <label class="block text-gray-700 font-semibold mb-2">
+          <label for="email"
+                 class="block text-gray-700
+                        font-semibold mb-2">
+
             Email Address
+
           </label>
 
           <input
             type="email"
             id="email"
+            name="email"
             placeholder="Enter your email"
+            autocomplete="email"
             required
-            class="w-full border border-gray-300 rounded-xl p-3
-                   outline-none focus:ring-2 focus:ring-emerald-500
-                   focus:border-emerald-500"
+
+            class="w-full border border-gray-300
+                   rounded-xl p-3 outline-none
+                   focus:ring-2 focus:ring-emerald-500
+                   focus:border-emerald-500
+                   transition"
           >
 
         </div>
+
 
         <!-- PASSWORD -->
 
         <div>
 
-          <label class="block text-gray-700 font-semibold mb-2">
+          <label for="password"
+                 class="block text-gray-700
+                        font-semibold mb-2">
+
             Password
+
           </label>
+
 
           <div class="relative">
 
             <input
               type="password"
               id="password"
+              name="password"
               placeholder="Enter your password"
+              autocomplete="current-password"
+              minlength="8"
               required
-              class="w-full border border-gray-300 rounded-xl
-                     p-3 pr-20 outline-none
-                     focus:ring-2 focus:ring-emerald-500"
+
+              class="w-full border border-gray-300
+                     rounded-xl p-3 pr-20 outline-none
+                     focus:ring-2 focus:ring-emerald-500
+                     focus:border-emerald-500
+                     transition"
             >
+
 
             <button
               type="button"
               id="togglePassword"
+
               class="absolute right-3 top-3
-                     text-emerald-700 font-semibold text-sm"
-            >
+                     text-emerald-700 font-semibold
+                     text-sm hover:text-green-900">
+
               Show
+
             </button>
 
           </div>
 
         </div>
 
-        <!-- REMEMBER ME AND FORGOT PASSWORD -->
 
-        <div class="flex justify-between items-center text-sm">
+        <!-- REMEMBER ME -->
 
-          <label class="flex items-center gap-2 text-gray-600">
+        <div class="flex justify-between
+                    items-center text-sm">
+
+          <label class="flex items-center
+                        gap-2 text-gray-600">
 
             <input
               type="checkbox"
               id="rememberMe"
-              class="accent-green-600"
+              class="accent-green-600 w-4 h-4"
             >
 
             Remember Me
 
           </label>
 
-          <a
-            href="#"
+
+          <button
+            type="button"
             id="forgotPassword"
-            class="text-emerald-700 font-semibold hover:underline"
-          >
+
+            class="text-emerald-700
+                   font-semibold hover:underline">
+
             Forgot Password?
-          </a>
+
+          </button>
 
         </div>
+
+
+        <!-- ERROR / SUCCESS MESSAGE -->
+
+        <p id="loginMessage"
+           class="text-sm text-center hidden"
+           role="status"
+           aria-live="polite">
+
+        </p>
+
 
         <!-- LOGIN BUTTON -->
 
         <button
           type="submit"
-          class="w-full bg-gradient-to-r from-green-600 to-emerald-500
-                 hover:from-green-700 hover:to-emerald-600
-                 text-white font-bold p-3 rounded-xl shadow-lg
-                 transition duration-300"
-        >
+
+          class="w-full bg-gradient-to-r
+                 from-green-600 to-emerald-500
+                 hover:from-green-700
+                 hover:to-emerald-600
+                 text-white font-bold p-3
+                 rounded-xl shadow-lg
+                 transition duration-300
+                 hover:-translate-y-1">
+
           Login →
+
         </button>
+
 
       </form>
 
+
       <!-- SIGNUP LINK -->
 
-      <p class="text-center text-gray-600 mt-7 text-sm">
+      <p class="text-center text-gray-600
+                mt-7 text-sm">
 
         Don't have an account?
 
         <a
           href="/Signup.html"
-          class="text-emerald-700 font-bold hover:underline"
-        >
+          class="text-emerald-700
+                 font-bold hover:underline">
+
           Sign Up
+
         </a>
 
       </p>
 
+
       <!-- FOOTER -->
 
-      <p class="text-center text-xs text-gray-400 mt-6">
+      <p class="text-center text-xs
+                text-gray-400 mt-6">
+
         Together for a greener tomorrow 🌱
+
       </p>
+
 
     </div>
 
@@ -166,13 +237,48 @@ document.querySelector('#loginApp').innerHTML = `
 `;
 
 
-// ==========================================
+// ======================================
+// GET ELEMENTS
+// ======================================
+
+const loginForm =
+  document.getElementById('loginForm');
+
+const emailInput =
+  document.getElementById('email');
+
+const passwordInput =
+  document.getElementById('password');
+
+const togglePassword =
+  document.getElementById('togglePassword');
+
+const rememberMe =
+  document.getElementById('rememberMe');
+
+const loginMessage =
+  document.getElementById('loginMessage');
+
+
+// ======================================
+// REMEMBER PREVIOUS EMAIL
+// ======================================
+
+const savedEmail =
+  localStorage.getItem('rememberedEmail');
+
+if (savedEmail) {
+
+  emailInput.value = savedEmail;
+
+  rememberMe.checked = true;
+
+}
+
+
+// ======================================
 // SHOW / HIDE PASSWORD
-// ==========================================
-
-const passwordInput = document.getElementById('password');
-
-const togglePassword = document.getElementById('togglePassword');
+// ======================================
 
 togglePassword.addEventListener('click', function() {
 
@@ -193,46 +299,138 @@ togglePassword.addEventListener('click', function() {
 });
 
 
-// ==========================================
+// ======================================
 // FORGOT PASSWORD
-// ==========================================
+// ======================================
 
 document.getElementById('forgotPassword')
-  .addEventListener('click', function(event) {
+  .addEventListener('click', function() {
 
-    event.preventDefault();
-
-    alert('Password recovery will be available soon!');
+    alert(
+      'Password recovery feature will be available soon!'
+    );
 
   });
 
 
-// ==========================================
+// ======================================
+// LOGIN MESSAGE FUNCTION
+// ======================================
+
+function showMessage(message, type) {
+
+  loginMessage.textContent = message;
+
+  loginMessage.classList.remove(
+    'hidden',
+    'text-red-600',
+    'text-green-600'
+  );
+
+  loginMessage.classList.add(
+    type === 'success'
+      ? 'text-green-600'
+      : 'text-red-600'
+  );
+
+}
+
+
+// ======================================
 // LOGIN FORM VALIDATION
-// ==========================================
+// ======================================
 
-
-// Login Form Functionality
-
-const loginForm = document.getElementById("loginForm");
-
-loginForm.addEventListener("submit", function(event) {
+loginForm.addEventListener('submit', function(event) {
 
   event.preventDefault();
 
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+  const email = emailInput.value.trim();
 
-  if (email.trim() === "" || password.trim() === "") {
-    alert("Please enter your email and password.");
+  const password = passwordInput.value;
+
+
+  // CHECK EMPTY FIELDS
+
+  if (email === '' || password.trim() === '') {
+
+    showMessage(
+      'Please enter your email and password.',
+      'error'
+    );
+
     return;
+
   }
 
-  // Save login information
-  localStorage.setItem("isLoggedIn", "true");
-  localStorage.setItem("userEmail", email);
 
-  // Navigate to Dashboard
-  window.location.href = "/Dashboard.html";
+  // CHECK EMAIL FORMAT
+
+  const emailPattern =
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailPattern.test(email)) {
+
+    showMessage(
+      'Please enter a valid email address.',
+      'error'
+    );
+
+    return;
+
+  }
+
+
+  // CHECK PASSWORD LENGTH
+
+  if (password.length < 8) {
+
+    showMessage(
+      'Password must contain at least 8 characters.',
+      'error'
+    );
+
+    return;
+
+  }
+
+
+  // REMEMBER EMAIL
+
+  if (rememberMe.checked) {
+
+    localStorage.setItem(
+      'rememberedEmail',
+      email
+    );
+
+  } else {
+
+    localStorage.removeItem('rememberedEmail');
+
+  }
+
+
+  // SAVE FRONTEND LOGIN STATUS
+
+  localStorage.setItem('isLoggedIn', 'true');
+
+  localStorage.setItem('userEmail', email);
+
+
+  // DISPLAY SUCCESS MESSAGE
+
+  showMessage(
+    'Login successful! Redirecting to Dashboard...',
+    'success'
+  );
+
+
+  // REDIRECT TO DASHBOARD
+
+  setTimeout(() => {
+
+    window.location.href = '/Dashboard.html';
+
+  }, 1000);
 
 });
